@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumentos</title>
+    <h1>Instrumentos de cuerda</h1>
+</head>
+
+<body>
+    <button onclick="mostrarOcultar('violin', this)">Violín</button>
+    <button onclick="mostrarOcultar('cello', this)">Cello</button>
+
+    <div id="violin" style="display: none;">
+        <img src="https://blog.musicopolix.com/wp-content/uploads/2022/04/tipos-de-violines-portada.jpg" alt="Violín" width="400">
+    </div>
+    <div id="cello" style="display: none;">
+        <img src="https://suzukitalenteducation.com.mx/admin/images/eventos/curiosidades-de-cello-violonchelo.jpg" alt="Cello" width="400">
+    </div>
+
+    <script>
+        function mostrarOcultar(id, boton) {
+            const elemento = document.getElementById(id);
+            if (elemento.style.display === 'none') {
+                elemento.style.display = 'block';
+                boton.textContent = 'Ocultar ' + boton.textContent;
+            } else {
+                elemento.style.display = 'none';
+                boton.textContent = boton.textContent.replace('Ocultar ', '');
+            }
+        }
+    </script>
+</body>
+</html>
